@@ -1,2 +1,2 @@
 # chestnut_TIL
-Today I Learn
+## 그 날 배운것을 기록합니다.
