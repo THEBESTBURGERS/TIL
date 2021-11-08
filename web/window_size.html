@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WindowSizwTest</title>
+  <style>
+  .tag{
+    display: inline-block;
+    background-color: antiquewhite;
+  }
+  </style>
+</head>
+<body>
+    <div class="tag">
+        <h2>window.screen :  <script> a</script></h2>
+        <h2>window.outer :     </h2>
+        <h2>window.inner :     </h2>
+        <h2>documentElement.clientWidth :     </h2>
+    </div>
+    <script>
+      window.addEventListener('resize', function(){
+        var a = window.screen
+        return a
+      })
+      // const window_screen = window.screen
+      // const window_outer = window_outer
+      // // const window_inner = window_inner
+      // // const documentElement_clientWidt = documentElement.clientWidt
+      // console.log(window_screen, window_outer, window_inner)
+    </>
+</body>
+</html>
