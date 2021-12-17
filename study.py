@@ -3,7 +3,6 @@ machine = {"coke": 1000,
            "snack": 1200,
            "brush": 2000,
            "toothpaste": 1000}
-
 hands = {}
 
 while True:
@@ -11,20 +10,21 @@ while True:
     if(money >= 10000):
         break
 
-
 while True:
     select_machine = input("구매를 원하시는 물품을 입력하세요. 원하는 물건이 더 없다면 0을 입력하세요.")
-    if(select_machine in machine):
+    if(select_machine in machine and money > 0):
         money = money-machine.get(select_machine)
         if(select_machine in hands):
             hands[select_machine] += 1
+            print("\n현재 남은 잔액은 {} 입니다.".format(money))
         else:
             hands.update({"{}".format(select_machine): 1})
-            print(money, select_machine, hands)
-    elif(select_machine == 0):
+            print("\n현재 남은 잔액은 {} 입니다.".format(money))
+    elif(select_machine == "0"):
         break
 
-
-print("구매를 종료했습니다.현재 남은 잔액은 {} 입니다.".format(money))
+print("\n================================================================")
+print("구매를 종료했습니다. 현재 남은 잔액은 {} 입니다.".format(money))
 print("구매한 목록은 다음과 같습니다.")
-print(hands.items())
+for key in hands:
+    print(key, ":", hands[key])
