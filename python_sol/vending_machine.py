@@ -24,7 +24,7 @@ while True:
         break
 
 print("\n================================================================")
-print("구매를 종료했습니다. 현재 남은 잔액은 {} 입니다.".format(money))
+print("구매를 종료했습니다. 현재 남은 잔액은 g} 입니다.".format(money))
 print("구매한 목록은 다음과 같습니다.")
 for key in hands:
     print(key, ":", hands[key])
