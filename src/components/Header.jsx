@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import LoginPopUp from '../components/LoginPopUp';
 import ToggleMenu from '../components/ToggleMenu';
 import {
@@ -13,10 +13,21 @@ const Header = () => {
   const [isLoginPopUp, setIsLoginPopUp] = useState(false);
   const [isToggleMenuPopUp, setIsToggleMenuPopUp] = useState(false);
 
+  const userIcon = useRef(null);
 
-  const onToggleMenu = () => {
-    isToggleMenuPopUp ? setIsToggleMenuPopUp(false) : setIsToggleMenuPopUp(true);
+  const handleCloseMenu = (e) => {
+    if (!isToggleMenuPopUp && userIcon.current.contains(e.target)){
+      setIsToggleMenuPopUp(true);
+    }
   }
+  
+  useEffect(()=>{
+    window.addEventListener('mousedown', handleCloseMenu);
+
+    return () => {
+      window.removeEventListener('mousedown', handleCloseMenu);
+    }
+  });
 
   return (
     <>
@@ -24,7 +35,7 @@ const Header = () => {
         <Logo>Devoard</Logo>
         <UserMenuWrapper>
           <UserIcon 
-            onClick={onToggleMenu}
+            ref={userIcon}
           />
           <LoginBtn
             color='orange'
