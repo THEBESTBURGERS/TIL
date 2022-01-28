@@ -27,7 +27,7 @@ const ToggleMenu = ({ isVisible, setIsVisible }) => {
   const menu = useRef(null);
 
   const handleCloseMenu = (e) => {
-    if (menu.current && !(menu.current.contains(e.target))){
+    if (isVisible && !(menu.current.contains(e.target))){
       setIsVisible(false);
     }
   }
