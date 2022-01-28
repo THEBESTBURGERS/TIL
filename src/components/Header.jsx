@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import LoginPopUp from '../components/LoginPopUp';
+import ToggleMenu from '../components/ToggleMenu';
 import {
   HeaderWrapper,
   Logo,
@@ -9,16 +10,12 @@ import {
 } from '../styles/Header'
 
 const Header = () => {
-  const [isLogin, setIsLogin] = useState(false);
   const [isLoginPopUp, setIsLoginPopUp] = useState(false);
+  const [isToggleMenuPopUp, setIsToggleMenuPopUp] = useState(false);
 
-  const onToggleLogin = () => {
-    if (isLogin == true) {
-      setIsLogin(false);
-    }
-    else if (isLogin === false) {
-      setIsLogin(true);
-    }
+
+  const onToggleMenu = () => {
+    isToggleMenuPopUp ? setIsToggleMenuPopUp(false) : setIsToggleMenuPopUp(true);
   }
 
   return (
@@ -26,7 +23,9 @@ const Header = () => {
       <HeaderWrapper>
         <Logo>Devoard</Logo>
         <UserMenuWrapper>
-          <UserIcon />
+          <UserIcon 
+            onClick={onToggleMenu}
+          />
           <LoginBtn
             color='orange'
             outline
@@ -35,7 +34,12 @@ const Header = () => {
             로그인
           </LoginBtn>
         </UserMenuWrapper>
+        <ToggleMenu
+          isVisible={isToggleMenuPopUp}
+          setIsVisible={setIsToggleMenuPopUp}
+        />
       </HeaderWrapper>
+
       <LoginPopUp
         isVisible={isLoginPopUp}
         setIsLoginPopUp={setIsLoginPopUp}
