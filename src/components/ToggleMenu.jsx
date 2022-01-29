@@ -1,4 +1,6 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useContext } from 'react';
+import { UserContext } from '../context/user';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const MenuWrapper = styled.div`
@@ -25,11 +27,18 @@ const Menu = styled.div`
 
 const ToggleMenu = ({ isVisible, setIsVisible }) => { 
   const menu = useRef(null);
+  const logout_menu = useRef(null);
+  const { setLoggedIn } = useContext(UserContext);
+  const navigate = useNavigate();
 
   const handleCloseMenu = (e) => {
-    if (isVisible && !(menu.current.contains(e.target))){
-      setIsVisible(false);
-    }
+    if (!isVisible) return null;
+    if (logout_menu.current === e.target)
+      setLoggedIn();
+    else if (menu.current.contains(e.target))
+      navigate(e.target.attributes.getNamedItem("data-link").value)
+ 
+    setIsVisible(false);
   }
 
   useEffect(()=>{
@@ -46,10 +55,12 @@ const ToggleMenu = ({ isVisible, setIsVisible }) => {
       <MenuWrapper
         ref={menu}
       >
-        <Menu>스크랩</Menu>
-        <Menu>나의 프로젝트</Menu>
-        <Menu>마이페이지</Menu>
-        <Menu>로그아웃</Menu>
+        <Menu data-link="/scrap">스크랩</Menu>
+        <Menu data-link="/my_project">나의 프로젝트</Menu>
+        <Menu data-link="/my_page">마이페이지</Menu>
+        <Menu
+          ref={logout_menu}
+        >로그아웃</Menu>
       </MenuWrapper>
     </>
   );

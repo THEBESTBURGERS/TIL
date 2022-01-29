@@ -27,7 +27,7 @@ const StyledButton = styled.button`
   font-size: 1.125rem;
   line-height: 1.7rem;
   padding: 0 1.5rem;
-  border-radius: 1.25rem;
+  border-radius: 0.5rem;
   cursor: pointer;
 
   ${colorStyles}

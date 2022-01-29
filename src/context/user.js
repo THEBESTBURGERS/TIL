@@ -1,17 +1,17 @@
-/*import { createContext, useState } from 'react';
+import { createContext, useState } from 'react';
 
 export const UserContext = createContext({
   loggedUser: {
     username: '',
     email: '',
-    first_name: ''
+    imageUrl: ''
   },
   loggedIn: false,
   setLoggedUser: () => {},
   setLoggedIn: () => {}
 })
 
-const UserProvider = ({children}) => {
+const UserProvider = ({ children }) => {
   const setLoggedUser = (data) => {
     setState(prevState => (
       {
@@ -34,7 +34,7 @@ const UserProvider = ({children}) => {
     loggedUser: {
       username: '',
       email: '',
-      first_name: ''
+      imageUrl: ''
     },
     loggedIn: false,
     setLoggedUser,
@@ -50,4 +50,4 @@ const UserProvider = ({children}) => {
   )
 }
 
-export default UserProvider;*/
+export default UserProvider;
