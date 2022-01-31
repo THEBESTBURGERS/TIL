@@ -49,6 +49,22 @@ export const Text = styled.h1`
 
 
 export const Checkbox = styled.div`
-	color: white;
+	background-color: white;
+	color: var(--basic-color);
+	font-family: var(--font-body);
+	font-size: 1.7rem;
+	width: 50em;
+	border-radius: 10px;
+	padding : 1rem;
+`;
+
+
+export const CheckboxList = styled.div`
+	background-color: white;
+	color: var(--basic-color);
+	font-family: var(--font-body);
+	font-size: 1.7rem;
+	width: 50em;
+	border-radius: 10px;
 	padding : 1rem;
 `;
