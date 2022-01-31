@@ -1,6 +1,6 @@
-import { Bar_background, Bar_content, Survey_text, Content, Checkbox_List,Checkbox, Text}  from '../styles/Survey'
-import { useState ,useEffect } from 'react'
-
+import { SurveyWrapper, BarBackground, BarContent, SurveyText, Content, Text,InputWrapper, CheckBtn, InputBox}  from '../styles/Survey';
+import { useState } from 'react';
+// import QuestionList from '../components/QuestionList';
 const num = 10
 
 
@@ -17,30 +17,30 @@ const Survey = () => {
   
 
   return (
-    <>
-      <Survey_text>
+    <SurveyWrapper>
+      <SurveyText>
         Survey
-      </Survey_text>
+      </SurveyText>
       <Content>
-        <Bar_background >
-          <Bar_content width={(count/num)*100 + "%"}>
-          </Bar_content>
-        </Bar_background>
+        <BarBackground >
+          <BarContent width={(count/num)*100 + "%"}>
+          </BarContent>
+        </BarBackground>
         <Text>
-          원하는 개발 분야를 선택해주세요
         </Text>
-        <Checkbox_List></Checkbox_List>
-        <Checkbox onClick={()=>{add_count()}}>
-          테스트1
-        </Checkbox>
-        <Checkbox onClick={()=>{add_count()}}>
-          테스트2
-        </Checkbox>
-        <Checkbox onClick={()=>{add_count()}}>
-          테스트3
-        </Checkbox>
+        <InputWrapper>
+          <InputBox onClick={()=>{add_count()}}>
+            <CheckBtn>프론트엔드</CheckBtn>
+          </InputBox>
+          <InputBox onClick={()=>{add_count()}}>
+            <CheckBtn>백엔드</CheckBtn>
+          </InputBox>
+          <InputBox onClick={()=>{add_count()}}>
+            <CheckBtn>IOS</CheckBtn>
+          </InputBox>
+        </InputWrapper>
       </Content>
-    </>
+    </SurveyWrapper>
   );
 }
 

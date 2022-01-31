@@ -1,33 +1,37 @@
 import styled from 'styled-components';
+import Button from '../components/Button';
 
-export const Survey_text = styled.div`
+export const SurveyWrapper = styled.div`
 	display: flex;
-	font-family: var(--font-body);
-	font-size: 1.7rem;
-	font-weight: bold;
+	justify-content: center;
+	flex-direction: column;
+`
+export const SurveyText = styled.div`
 	color: white;
-	padding : 2rem;
-	padding-bottom:3rem;
+	font-family: var(--font-body);
+	font-weight: 600;;
+	font-size: 1.7rem;
+	padding: 2rem 0 2rem 0;
 `;
 
 
-export const Content = styled.section`
+export const Content = styled.div`
 	display: flex;
 	flex-direction:column;
-	align-content: center;
 	align-items: center;
+	margin: 0 12rem 0 12rem;
 `;
 
 
-export const Bar_background = styled.div`
+export const BarBackground = styled.div`
+	width: 100%;
 	background-color: white;
-	width: 50em;
 	height: 1.2em;
 	align-items: center;
 	border-radius: 20px;
 `;
 
-export const Bar_content = styled.div`
+export const BarContent = styled.div`
 	background-color: var(--color-orange);
 	width: ${props => props.width};
 	height: 1.2em;
@@ -38,33 +42,38 @@ export const Bar_content = styled.div`
 `;
 
 
-export const Text = styled.h1`
+export const Text = styled.div`
 	font-family: var(--font-body);
 	font-size: 1.7rem;
 	color: white;
-	padding:1.5em;
-	margin:0;
+	padding:1.5em 0 1.5em 0;
+	margin-right: auto;
 `;
 
 
+export const InputWrapper=styled.div`
+  display: flex;
+	flex-direction:column;
+	justify-content: center;
+	width: 100%;
+`
 
-export const Checkbox = styled.div`
+
+export const InputBox = styled.div`
+	color: white;
+	width: 100%;
+  margin-bottom: 1rem;
+	`
+
+export const CheckBtn = styled.div`
 	background-color: white;
-	color: var(--basic-color);
-	font-family: var(--font-body);
-	font-size: 1.7rem;
-	width: 50em;
+	font-size: 1.4rem;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 3rem;
 	border-radius: 10px;
-	padding : 1rem;
-`;
-
-
-export const CheckboxList = styled.div`
-	background-color: white;
 	color: var(--basic-color);
-	font-family: var(--font-body);
-	font-size: 1.7rem;
-	width: 50em;
-	border-radius: 10px;
-	padding : 1rem;
-`;
+	width: 100%;
+	height : 3rem;
+	margin-bottom : 0.5rem; 
+`
