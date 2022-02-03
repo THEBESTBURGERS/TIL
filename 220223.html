@@ -50,10 +50,12 @@
 7. 4 -->
 
 
-<html lang="en">
+<!-- CSS : 레이아웃 만들기 -->
+
+<!--<html lang="en">
 <head>
   <title>layout practice</title>
-  <!-- 초기화 -->
+  초기화
   <style>
     @font-face {
     font-family: 'ACCchildrenheartOTF-Regular';
@@ -69,7 +71,7 @@
     a { text-decoration: none; }
     img { border: 0; }
   </style>
-  <!-- 헤더 -->
+  헤더
   <style>
     #main_header {
       /* 중앙 정렬 */
@@ -91,13 +93,13 @@
     }
     
   </style>
-  <!-- 타이틀 -->
+  타이틀
   <style>
     #title {
       font-family: 'ACCchildrenheartOTF-Regular';
     }
   </style>
-  <!-- 메뉴1 -->
+  메뉴1
   <style>
     #main_gnb > ul { overflow: hidden; }
     #main_gnb > ul > li { float: left; }
@@ -113,7 +115,7 @@
     #main_gnb > ul > li:first-child > a { border-radius: 10px 0 0 10px; } 
     #main_gnb > ul > li:last-child > a { border-radius: 0 10px 10px 0; } 
   </style>
-  <!-- 메뉴2 -->
+  메뉴2
   <style>
     #main_lnb > ul { overflow: hidden; }
     #main_lnb > ul > li { float: left; }
@@ -129,7 +131,7 @@
     #main_lnb > ul > li:first-child > a { border-radius: 10px 0 0 10px; } 
     #main_lnb > ul > li:last-child > a { border-radius: 0 10px 10px 0; } 
   </style>
-  <!-- 콘텐츠 -->
+  콘텐츠
   <style>
     #content {
       /* 중앙 정렬 */
@@ -146,7 +148,7 @@
       float: right;
     }
   </style>
-  <!-- 본문 -->
+  본문
   <style>
     #main_section > #main_article {
       margin-bottom: 10px;
@@ -154,7 +156,7 @@
       border: 1px solid black;
     }
   </style>
-  <!-- 사이드 -->
+  사이드
   <style>
     /* 첫 번째 탭*/
     input:nth-of-type(1) { display: none; }
@@ -189,7 +191,7 @@
       color: black;
     }
   </style>
-  <!-- 목록 -->
+  목록
   <style>
     .item {
       overflow: hidden;
@@ -212,7 +214,7 @@
       text-overflow: ellipsis;
     }
   </style>
-  <!-- 푸터 -->
+  푸터
   <style>
     #main_footer { 
       /* 중앙 정렬 */
@@ -372,5 +374,54 @@
     <h3>HTML5 + CSS3 Basic</h3>
     <address>Website Layout Basic</address>
   </footer>
+</body>
+</html>
+
+
+
+
+<!-- Browser : 좌표 실습 -->
+
+<html lang="en">
+<head>
+  <title>Coordinates Proctice</title>
+  <style>
+    body {
+      background-color: black;
+    }
+    #div_tag {
+      width: 150px;
+      height: 150px;
+      margin: 5px;
+      background-color: rgb(255, 196, 216);
+    }
+    #div_special {
+      width: 150px;
+      height: 150px;
+      margin: 5px;
+      background-color: rgb(255, 74, 134);
+    }
+  </style>
+  <script>
+    document.addEventListener(MouseEvent, onclick);
+    const onclick(e){
+      console.log(`client : `)
+      console.log(`client : `)
+    }
+  </script>
+</head>
+<body>
+  <div id="div_tag"></div>
+  <div id="div_tag"></div>
+  <div id="div_tag"></div>
+  <div id="div_tag"></div>
+  <div id="div_tag"></div>
+  <div id="div_tag"></div>
+  <div id="div_tag"></div>
+  <div id="div_tag"></div>
+  <div id="div_special"></div>
+  <div id="div_tag"></div>
+  <div id="div_tag"></div>
+  <div id="div_tag"></div>
 </body>
 </html>
