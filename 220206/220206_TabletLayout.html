@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tablet Layout Practice</title>
+	<!-- 초기화 -->
+	<style>
+		* { margin: 0; padding: 0;}
+		body { font-family: 'Heletica', sans-serif;}
+		li { list-style: none; }
+		a { text-decoration: none;}
+		body { min-width: 760px; }
+	</style>
+	<!-- 헤더 -->
+	<style>
+		#main_header{
+			height: 60px;
+			line-height: 60px;
+			padding-left: 10px;
+			border-bottom: 1px solid black;
+			background: #1D4088;
+			color: white;
+		}
+	</style>
+	<!-- 네비게이션 -->
+	<style>
+		#main_gnb {
+			overflow: hidden;
+			border-bottom: 1px solid black;
+			background: #32394A;
+		}
+		#main_gnb > ul.left{
+			overflow: hidden;
+			float: left;
+		}
+		#main_gnb > ul.right{
+			overflow: hidden;
+			float: right;
+		}
+		#main_gnb > ul.left > li{ float: left; }
+		#main_gnb > ul.right > li{ float: left; }
+		#main_gnb a {
+			/* 레이아웃 설정 */
+			display: block;
+			padding: 10px 20px;
+			/* 색상 설정 */
+			border-left: 1px solid #5F6673;
+			border-right: 1px solid #242A37;
+			color: white;
+			font-weight: bold;
+		}
+	</style>
+	<!-- 본문 -->
+	<style>
+		#wrap {
+			overflow: hidden;
+		}
+		#wrap > #content_wrap {
+			float: right;
+			width: 100%;
+			margin-right: -200px;
+			background: white;
+		}
+		#content {
+			padding-right: 200px;
+			border-left: 1px solid black;
+		}
+		article {
+			padding: 10px;
+		}
+	</style>
+	<!-- 사이드 목록-->
+	<style>
+		#wrap{ background: #71B1D1; }
+		#wrap > #main_lnb{
+			float: left;
+			width: 200px;
+		}
+		#wrap > #main_lnb > ul > li {
+			padding: 12px;
+			border-top: 1.5px solid #48a4d3;
+			border-bottom: 1.5px solid #b1c9d4;
+		}
+		#wrap > #main_lnb > ul > li > a {
+			display: block;
+			height: 40px;
+			font-weight: bold;
+			color: white;
+		}
+		</style>
+	<!-- 푸터 -->
+	<style>
+		#main_footer{
+			border-top: 3px solid black;
+			padding: 10px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<header id="main_header">
+		<h1>Fluid</h1>
+	</header>
+	<nav id="main_gnb">
+		<ul class="left">
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+		</ul>
+		<ul class="right">
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+		</ul>
+	</nav>
+	<div id="wrap">
+		<nav id="main_lnb">
+			<ul>
+				<li><a href="#">Button</a></li>
+				<li><a href="#">Button</a></li>
+				<li><a href="#">Button</a></li>
+				<li><a href="#">Button</a></li>
+				<li><a href="#">Button</a></li>
+			</ul>
+		</nav>
+		<div id="content_wrap">
+			<div id="content">
+				<article>
+					<h1>Lorem ipsum dolor sit amet</h1>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit asperiores facere adipisci repellat cupiditate magni nobis, eligendi soluta mollitia hic quae tempora? Ea, sit atque repellendus itaque totam ex et? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit asperiores facere adipisci repellat cupiditate magni nobis, eligendi soluta mollitia hic quae tempora? Ea, sit atque repellendus itaque totam ex et?</p>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit asperiores facere adipisci repellat cupiditate magni nobis, eligendi soluta mollitia hic quae tempora? Ea, sit atque repellendus itaque totam ex et? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit asperiores facere adipisci repellat cupiditate magni nobis, eligendi soluta mollitia hic quae tempora? Ea, sit atque repellendus itaque totam ex et?</p>
+				</article>
+				<article>
+					<h1>Lorem ipsum dolor sit amet</h1>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit asperiores facere adipisci repellat cupiditate magni nobis, eligendi soluta mollitia hic quae tempora? Ea, sit atque repellendus itaque totam ex et? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit asperiores facere adipisci repellat cupiditate magni nobis, eligendi soluta mollitia hic quae tempora? Ea, sit atque repellendus itaque totam ex et?</p>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit asperiores facere adipisci repellat cupiditate magni nobis, eligendi soluta mollitia hic quae tempora? Ea, sit atque repellendus itaque totam ex et? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit asperiores facere adipisci repellat cupiditate magni nobis, eligendi soluta mollitia hic quae tempora? Ea, sit atque repellendus itaque totam ex et?</p>
+				</article>
+				<article>
+					<h1>Lorem ipsum dolor sit amet</h1>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit asperiores facere adipisci repellat cupiditate magni nobis, eligendi soluta mollitia hic quae tempora? Ea, sit atque repellendus itaque totam ex et? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit asperiores facere adipisci repellat cupiditate magni nobis, eligendi soluta mollitia hic quae tempora? Ea, sit atque repellendus itaque totam ex et?</p>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit asperiores facere adipisci repellat cupiditate magni nobis, eligendi soluta mollitia hic quae tempora? Ea, sit atque repellendus itaque totam ex et? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit asperiores facere adipisci repellat cupiditate magni nobis, eligendi soluta mollitia hic quae tempora? Ea, sit atque repellendus itaque totam ex et?</p>
+				</article>
+			</div>
+		</div>
+	</div>
+	<footer id="main_footer">
+		<h3>HTML5 + CSS3 Basic</h3>
+		<address>Website Layout Basic</address>
+	</footer>
+</body>
+</html>
