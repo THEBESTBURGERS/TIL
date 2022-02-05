@@ -1,0 +1,23 @@
+html {
+    cursor: url(./img/target.png), pointer;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#content{
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 30px
+}
+#coordinates{
+    color: white;
+    border: 5px solid white;
+}

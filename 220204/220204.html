@@ -1,5 +1,4 @@
-<!-- CSS : Moblie Layout -->
-
+<!-- CSS : Moblie Layout
 
 <html lang="en">
 <head>
@@ -10,4 +9,78 @@
 
 </body>
 
+</html> -->
+
+
+
+<!-- Browser : 좌표 실습 -->
+
+<html lang="en">
+<head>
+  <title>Coordinates Proctice</title>
+  <style>
+    body {
+      background-color: black;
+    }
+    #button_div {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+    }
+    #div_tag {
+      width: 200px;
+      height: 200px;
+      margin: 5px;
+      background-color: rgb(255, 196, 216);
+    }
+    #div_special {
+      width: 200px;
+      height: 200px;
+      margin: 5px;
+      background-color: rgb(255, 74, 134);
+    }
+  </style>
+</head>
+<body>
+  <div id="button_div">
+    <button id="by">Scroll by 100px(y)</button>
+    <button id="to">Scroll to 100px(y)</button>
+    <button id="into">Scroll into specialDiv</button>
+  </div>
+  <div id="div_tag"></div>
+  <div id="div_tag"></div>
+  <div id="div_special"></div>
+  <div id="div_tag"></div>
+  <div id="div_tag"></div>
+  <div id="div_tag"></div>
+  <div id="div_tag"></div>
+  <div id="div_tag"></div>
+  <div id="div_tag"></div>
+  <div id="div_tag"></div>
+  <script>
+    const specialDiv = document.querySelector('#div_special');
+    specialDiv.addEventListener('click', (e) => {
+      const rect = specialDiv.getBoundingClientRect()
+      console.log(rect)
+      console.log(`client : ${rect.x}, ${rect.y}`)
+      console.log(`client : ${event.clientX}, ${event.clientY}`)
+      console.log(`page : ${rect.x + rect.width}, ${rect.y + rect.height}`)
+      console.log(`page :  ${event.pageX}, ${event.pageY}`)
+    })
+    const by = document.querySelector('#by');
+    by.addEventListener('click', () => {
+      window.scrollBy(0, 100)
+      console.log("by clicked", event.pageX, event.pageY)
+    })
+    const to = document.querySelector('#to');
+    to.addEventListener('click', () => {
+      window.scrollTo(0, 100)
+      console.log("to clicked", event.pageX, event.pageY)
+    })
+    const into = document.querySelector('#into');
+    into.addEventListener('click', () => {
+      specialDiv.scrollIntoView();
+    })
+  </script>
+</body>
 </html>
